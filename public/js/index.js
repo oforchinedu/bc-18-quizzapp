@@ -1,3 +1,5 @@
+var username = "";
+
 var provider = new firebase.auth.GoogleAuthProvider();
 
 firebase.auth().signInWithPopup(provider).then(function(result) {
@@ -6,7 +8,7 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   // The signed-in user info.
   var user = result.user;
 
-  console.log(user)
+  getUsername(user.displayName);
   // ...
 }).catch(function(error) {
   // Handle Errors here.
@@ -19,16 +21,9 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
   // ...
 });
 
-// Get a reference to the database service
-var database = firebase.database();
 
-function writeUserData(userId, name, email, imageUrl) {
-  firebase.database().ref('users/' + userId).set({
-    username: name,
-    email: email
-  });
-  console.log(username)
+//User name
+function getUsername(name){
+	document.getElementById("name").innerHTML = "Welcome" + " " + name;
 }
-
-
 
