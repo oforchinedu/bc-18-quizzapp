@@ -8,6 +8,8 @@
 		{"question":"The absorption of ink by blotting paper involves", "a":"viscosity of ink", "b":"capillary action phenomenon", "c":"diffusion of ink through the blotting", "d":"siphon action", "ans":"b"},
 		{"question":"Siphon will fail to work if", "a":"the densities of the liquid in the two vessels are equal", "b":"the level of the liquid in the two vessels are at the same height", "c":"both its limbs are of unequal length", "d":"the temperature of the liquids in the two vessels are the same", "ans":"b"},
 		{"question":"Light year is a unit of", "a":"time", "b":"distance", "c":"light", "d":"intensity", "ans":"b"},
-		{"question":"Mirage is due to", "a":"unequal heating of different parts of the atmosphere", "b":"magnetic disturbances in the atmosphere", "c":"depletion of ozone layer in the atmosphere", "d":"equal heating of different parts of the atmosphere", "ans":"a"}
+		{"question":"Mirage is due to", "a":"unequal heating of different parts of the atmosphere", "b":"magnetic disturbances in the atmosphere", "c":"depletion of ozone layer in the atmosphere", "d":"equal heating of different parts of the atmosphere", "ans":"a"},
+		{"question":"Lux is the SI unit of", "a":"intensity of illumination", "b":"luminous efficiency", "c":"luminous flux", "d":"luminous intensity", "ans":"a"}
+
 	]
 }
