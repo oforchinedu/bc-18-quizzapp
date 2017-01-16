@@ -1,0 +1,14 @@
+{
+	"questions":[
+		{"question":"He is __________?", "a":"in home", "b":"in the home", "c":"at home", "d":"at the home", "ans":"c"},
+		{"question":"Their daughter is with __________?", "a":"him", "b":"his", "c":"here", "d":"he", "ans":"a"},
+		{"question":"Are you __________ ?", "a":"on work", "b":"at work", "c":"on job", "d":"work", "ans":"b"},
+		{"question":"I __________ speak English.", "a":"don't can", "b":"doesn't can", "c":"cannot", "d":"not can", "ans":"c"},
+		{"question":"Peter __________ watching TV.", "a":"not like", "b":"don't", "c":"doesn't like", "d":"like", "ans":"c"},
+		{"question":"I __________ English.", "a":"is learning", "b":"learning", "c":"am learning", "d":"are learning", "ans":"c"},
+		{"question":"What do you say at 9 a.m.?", "a":"Good afternoon", "b":"Good-bye", "c":"Good evening", "d":"Good morning", "ans":"d"},
+		{"question":"Do you like it?", "a":"Yes, I like you", "b":"Yes, I do.", "c":"No, I do.", "d":"Yes, you do.", "ans":"b"},
+		{"question":"How __________ you do?", "a":"are", "b":"is", "c":"do", "d":"old", "ans":"c"},
+		{"question":"__________ early in the morning?", "a":"Does he get up", "b":"Gets he up", "c":"Does he up", "d":"Get he up", "ans":"a"}
+	]
+}
