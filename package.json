@@ -1,0 +1,26 @@
+{
+  "name": "quizzit",
+  "version": "1.0.0",
+  "description": "User can take quizz and view score",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oforchinedu/bc-18-quizzapp.git"
+  },
+  "author": "Ofor Chinedu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oforchinedu/bc-18-quizzapp/issues"
+  },
+  "homepage": "https://github.com/oforchinedu/bc-18-quizzapp#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
