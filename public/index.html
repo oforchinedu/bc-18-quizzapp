@@ -29,22 +29,99 @@
 	    messagingSenderId: "163038806996"
 	  };
 	  firebase.initializeApp(config);
+		    // Set the configuration for your app
+	  // TODO: Replace with your project's config object
+	  var config = {
+	    apiKey: "AIzaSyAWUbFWZVXlhhDIlfliUOuRZCvcwfN1UYw",
+	    authDomain: "quizzit-95706.firebaseapp.com",
+	    databaseURL: "https://quizzit-95706.firebaseio.com",
+	    storageBucket: "quizzit-95706.appspot.com"
+	  };
+
+	  // Get a reference to the database service
+	  var database = firebase.database();
 	</script>
 	<link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.5/firebase-ui-auth.css" />
 
-	<div class="row text-center">
-		<h1 class="text-primary">Quizz App!</h2>
-  	</div>
+	<div class="container img-responsive">
+		<div class="row text-center">
+			<div class="col-md-7">
+				<h1 class="text-primary text-right">Quizzit!</h2>
+			</div>
+			<div class="col-md-5">
+				<h6 class="text-primary text-center" id="namex">Welcome</h6>
+			</div>
+	  	</div>
+	</div>
+
+
+	
+
+	<div class="container img-responsive">
+
+		<div class="row text-center message qBox col-md-12">
+
+
+			<!-- Box to hold all elements -->
+			<div class="col-lg-12 ">
+				
+				<!-- div to hold form -->
+				<div class="formClass" id="formClass">
+					<!-- Form to Hold topics -->
+					<select id="subject" class="select">
+						<option>Select Subject&nbsp;&nbsp;</option>
+						<option>English</option>
+						<option>General</option>
+						<option>HTML</option>
+						<option>Maths</option>
+						<option>Physics</option>	
+					</select>
+					<input type="submit" name="Start" id="btn-submit" class="btn-default btn" target="_blank" >	
+
+
+<!-- div to display questions -->
+					<div class="question hidden">
+						<h2 id="qp">here</h2>
+						<form id="myForm" class="modal-body">
+							<input id="radio1" type="radio" name="radio" value="a"><label for="radio1" class="radio" id="optionA" ></label>
+							<input id="radio2" type="radio" name="radio" value="b"><label for="radio2" class="radio" id="optionB" ></label>
+							<input id="radio3" type="radio" name="radio" value="c"><label for="radio3" class="radio" id="optionC" ></label>
+							<input id="radio4" type="radio" name="radio" value="d"><label for="radio4" class="radio" id="optionD" ></label>
+						</form>
+						<br><br><br><br><br><br><br><br><br>
+						<button class="btn btn-default btn-md" id="prev" >Previous</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<button class="btn btn-default btn-md" id="next">Next</button>
+
+					</div>
+						<!-- end of questions div -->					
+
+						
+				</div>
+				<!-- End of form div -->
+
+				
+
+
+
+			</div>
+			<!-- End of Box that holds all elements -->
+
+
+		</div>
+
+
+   </div>
 
 
 
 
 
-
-
-
-
-
+	<footer>
+	  <p>&copy;Copyright <a href="hhttp://codepen.io/techboss/" target="_blank">Ofor Chinedu P.</a> 2016.</p>
+	</footer>
+	  
+	  
+	</div>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
 	<script src="js/index.js"></script>
