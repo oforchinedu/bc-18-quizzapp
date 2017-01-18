@@ -46,13 +46,15 @@
 	<div class="container img-responsive">
 		<div class="row text-center">
 			<div class="col-md-7">
-				<h1 class="text-primary text-right">Quizzit!</h2>
+				<a><h1 onclick="backToHome()" class="text-primary text-right">Quizzit!</h2></a>
 			</div>
-			<div class="col-md-5">
-				<h6 class="text-primary text-center" id="namex">Welcome</h6>
+			<div class="col-md-5 text-right">
+				<h6 class="text-primary" id="namex">Welcome</h6>
+				<img onclick="retriveDashBoard()" class="img-circle" id="myImg" src="" width="107" height="98">
 			</div>
 	  	</div>
 	</div>
+	<br><br>
 
 
 	
@@ -64,6 +66,35 @@
 
 			<!-- Box to hold all elements -->
 			<div class="col-lg-12 ">
+
+
+			<!-- Timer Div -->
+      			<h1></h1>
+      			<div id="clockdiv">
+      				
+      				<!-- -->
+			        <div class="">
+			          <span class="days"></span>
+			          <div class="smalltext">Days</div>
+			        </div>
+        			<!-- -->
+
+        			<div>
+				        <span class="hours"></span>
+				        <div class="smalltext">Hours</div>
+				    </div>
+				    <div>
+				        <span class="minutes"></span>
+				        <div class="smalltext">Minutes</div>
+				    </div>
+				    <div>
+				        <span class="seconds" id="seconds"></span>
+				        <div class="smalltext">Seconds</div>
+			        </div>
+
+
+
+      			</div>
 				
 				<!-- div to hold form -->
 				<div class="formClass" id="formClass">
@@ -76,7 +107,7 @@
 						<option>Maths</option>
 						<option>Physics</option>	
 					</select>
-					<input type="submit" name="Start" id="btn-submit" class="btn-default btn" target="_blank" >	
+					<button id="btn-submit" class="btn-default btn">Start!</button>
 
 
 <!-- div to display questions -->
@@ -90,16 +121,78 @@
 						</form>
 						<br><br><br><br><br><br><br><br><br>
 						<button class="btn btn-default btn-md" id="prev" >Previous</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<button class="btn btn-default btn-md" id="next">Next</button>
+						<button class="btn btn-default btn" id="next">Next</button>
 
 					</div>
-						<!-- end of questions div -->					
+					<!-- end of questions div -->
 
-						
+
+					<!-- Div for Dash Board -->
+					<div class="dash hidden">
+						<!-- DashBoard -->
+						<h1>Dashboard</h1>
+						<table>
+							<thead class="thead">
+								<tr>
+									<td>SUBJECTS</td>
+									<td>SCORES</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>English</td>
+									<td id="eng"></td>
+								</tr>
+								<tr>
+									<td>General</td>
+									<td id="gen"></td>
+								</tr>
+								<tr>
+									<td>HTML</td>
+									<td id="ht"></td>
+								</tr>
+								<tr>
+									<td>Mathematics</td>
+									<td id="maths"></td>
+								</tr>
+								<tr>
+									<td>Physics</td>
+									<td id="phy"></td>
+								</tr>
+							</tbody>
+						</table>
+					<!-- End of Dash Board -->
+					</div>
+					<!-- end of Dash board div -->
+
+					<!--- Score Display -->
+					<div class="score hidden jumbotron" >
+					    <h3 class="mark"></h1>
+					    <form>
+					    <input TYPE="button" class="btn" onClick="history.go(0)" VALUE="Take Quiz"></form>
+					</div>
+					<!--- Score Display -->
+
+
+
+
 				</div>
 				<!-- End of form div -->
 
-				
+				<!-- Audio -->
+				<audio id="end">
+				    <source src="http://www.freesfx.co.uk/rx2/mp3s/4/16412_1460641277.mp3" >
+				    </source>
+				</audio>
+				<audio id="clap">
+				    <source src="http://www.freesfx.co.uk/rx2/mp3s/4/16491_1460645116.mp3" >
+				    </source>
+				 </audio>
+
+				  <!--- End of Audio -->
+
+
+
 
 
 
