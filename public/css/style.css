@@ -41,6 +41,10 @@ h1 {
 }
 
 
+.img-circle {
+    border-radius: 50%;
+}
+
 .radio {
   position: relative;
   float: left;
@@ -109,7 +113,7 @@ h1{
     display: inline-block;
     font-weight: 100;
     text-align: center;
-    font-size: 30px;
+    font-size: 10px;
 }
 
 #clockdiv > div{
@@ -135,4 +139,38 @@ footer {
   width: 100%;
   text-align: center;
   margin-top: 40px;
+}
+
+
+/*Responsive table*/
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  background: #34495e; 
+  color: #f3f3f3;
+  
+  margin-bottom: 100px;
+}
+
+td, th { 
+  padding: 8px; 
+  text-align: left; 
+}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+  background: #16a085; 
+}
+
+th { 
+  background: #2c3e50; 
+  font-weight: bold; 
+}
+
+.thead{
+  color: Black;
+}
+
+.score {
+  margin-bottom: 100px;
 }
