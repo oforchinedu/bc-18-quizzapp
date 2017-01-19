@@ -67,11 +67,13 @@ $(document).ready(function(){
 	})
 	//function to validate USer Choice
 	function validateSelection(){
-		choice = document.getElementById("subject").value
+		choice = document.getElementById("subject").value;
+		console.log("choice= " + choice);
 		var subjects = ["English","General","HTML","Maths","Physics"]
 		if (subjects.indexOf(choice) !== -1){
-			window.location.href = "/quiz?topic=" + choice
+			//window.location.href = "/quiz/" + choice
 			localStorage.setItem("choice", choice);
+			window.location = "/quiz/"+choice;
 		}
 		else{
 			alert("Invalide choice");
