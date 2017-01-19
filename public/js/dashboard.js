@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 	//function to set username
 	function getUsername(name){
-		document.getElementById("namex").innerHTML = "Welcome" + " " + name;
+		document.getElementById("namex").innerHTML = "Welcome" + " " + username;
 	}
 
 	//function to set picture
