@@ -16,7 +16,7 @@ $(document).ready(function(){
 	$("#btn-signout").on("click", function(){
 		firebase.auth().signOut().then(function() {
 		  // Sign-out successful.
-		  window.location.href = "/index.html"
+		  window.location.href = "/logout.html"
 		}, function(error) {
 		  // An error happened.
 		});
@@ -40,7 +40,7 @@ $(document).ready(function(){
 	}
 
 	
-
+	retriveDashBoard()
 	
 
 	
@@ -48,14 +48,6 @@ $(document).ready(function(){
 	var database = firebase.database();
 
 	var path = firebase.database().ref('/users/');
-
-	function updateDB(){
-		let pathRef = firebase.database().ref('/users/' + username)
-		pathRef.child(subject).set({
-			"score": score
-		});
-		
-	}
 
 	function backToHome(){
 		window.location.href = "/dashboard.html"
@@ -67,11 +59,21 @@ $(document).ready(function(){
 		var english, general, html, maths, physics;
 		firebase.database().ref('/users/' + username).once('value').then(function(snapshot){
 			var userDetails = snapshot.val();
-			document.getElementById("eng").innerHTML = userDetails.english.score;
-			document.getElementById("gen").innerHTML = userDetails.general.score;
-			document.getElementById("ht").innerHTML = userDetails.html.score;
-			document.getElementById("maths").innerHTML = userDetails.maths.score;
-			document.getElementById("phy").innerHTML = userDetails.physics.score;
+			if(userDetails.english !== undefined){
+				document.getElementById("eng").innerHTML = userDetails.english.score;
+			}
+			if(userDetails.general !== undefined){
+				document.getElementById("gen").innerHTML = userDetails.general.score;
+			}
+			if(userDetails.html !== undefined){
+				document.getElementById("ht").innerHTML = userDetails.html.score;
+			}
+			if(userDetails.maths !== undefined){
+				document.getElementById("maths").innerHTML = userDetails.maths.score;
+			}
+			if(userDetails.physics !== undefined){
+				document.getElementById("phy").innerHTML = userDetails.physics.score;
+			}
 		})
 	}
 

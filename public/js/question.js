@@ -33,6 +33,7 @@ $(document).ready(function(){
 	$("#btn-signout").on("click", function(){
 		firebase.auth().signOut().then(function() {
 		  // Sign-out successful.
+		  window.location.href = "/logout.html"
 		}, function(error) {
 		  // An error happened.
 		});
@@ -155,7 +156,7 @@ $(document).ready(function(){
 
 	function updateDB(){
 		let pathRef = firebase.database().ref('/users/' + username)
-		pathRef.child(subject).set({
+		pathRef.child(subject).update({
 			"score": score
 		});
 		

@@ -26,6 +26,10 @@ h1 {
 .font-bold {
 }
 
+.up {
+  margin-top: 0px;
+}
+
 .qBox{box-shadow: 10px 10px 30px #333;}
 
 
@@ -42,7 +46,16 @@ h1 {
 
 
 .img-circle {
-    border-radius: 50%;
+  border-radius: 50%;
+  border: 0;
+}
+
+img {
+  border : 0;
+}
+
+img a {
+  outline : none;
 }
 
 .radio {
@@ -135,10 +148,19 @@ h1{
     font-size: 16px;
 }
 
-footer {
-  width: 100%;
+.foot {
+  margin-top: 30px;
+  margin-left: 40%;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
   text-align: center;
-  margin-top: 40px;
 }
 
 
