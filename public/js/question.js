@@ -27,7 +27,8 @@ $(document).ready(function(){
 	// Get a reference to the database service
 	var database = firebase.database();
 	var username = localStorage.getItem("username")
-	var subject = localStorage.getItem("choice").toLowerCase();
+	var subject = localStorage.getItem("choice");
+	subject.toLowerCase()
 
 
 	//Clock pasing time
@@ -139,7 +140,8 @@ $(document).ready(function(){
 	//function to retrieve question by type from firebase DB
 	firebase.database().ref('/category/').once('value').then(function(snapshot) {
   		var questionsBank = snapshot.val();
-  		//console.log(questionsBank[subject].questions);
+  		subject = subject.toLowerCase()
+  		console.log(questionsBank[subject].questions);
   		extractQuestion(questionsBank[subject].questions)
 	});
 

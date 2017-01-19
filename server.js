@@ -5,23 +5,23 @@ const pathName = __dirname + '/public'
 
 app.use(express.static('public'));
 
-app.get('/quiz/', function(req, res){
+app.get('/quiz/english', function(req, res){
 	return res.sendFile( pathName + '/english.html');
 })
 
-app.get('/quiz/', function(req, res){
+app.get('/quiz/general', function(req, res){
 	return res.sendFile( pathName + '/general.html');
 })
 
-app.get('/quiz/', function(req, res){
+app.get('/quiz/htm', function(req, res){
 	return res.sendFile( pathName + '/htm.html');
 })
 
-app.get('/quiz/', function(req, res){
+app.get('/quiz/maths', function(req, res){
 	return res.sendFile( pathName + '/maths.html');
 })
 
-app.get('/quiz/', function(req, res){
+app.get('/quiz/physics', function(req, res){
 	return res.sendFile( pathName + '/physics.html');
 })
 
@@ -30,6 +30,6 @@ app.get('/public', function(req, res){
 })
 
 
-app.listen(3000, function() {
-  console.log('listening on 3000')
+app.listen(5000, function() {
+  console.log('listening on 5000')
 })
