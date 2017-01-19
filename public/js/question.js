@@ -141,7 +141,6 @@ $(document).ready(function(){
 	firebase.database().ref('/category/').once('value').then(function(snapshot) {
   		var questionsBank = snapshot.val();
   		subject = subject.toLowerCase()
-  		console.log(questionsBank[subject].questions);
   		extractQuestion(questionsBank[subject].questions)
 	});
 

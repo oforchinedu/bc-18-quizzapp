@@ -11,7 +11,6 @@ $(document).ready(function(){
 	  var profile_picture = user.photoURL;
 	  var email = user.email;
 
-	  console.log(user)
 	  setPicture(user.photoURL)
 	  getUsername(user.displayName);
 	  username = user.displayName
@@ -68,7 +67,6 @@ $(document).ready(function(){
 	//function to validate USer Choice
 	function validateSelection(){
 		choice = document.getElementById("subject").value;
-		console.log("choice= " + choice);
 		var subjects = ["English","General","HTML","Maths","Physics"]
 		if (subjects.indexOf(choice) !== -1){
 			//window.location.href = "/quiz/" + choice
