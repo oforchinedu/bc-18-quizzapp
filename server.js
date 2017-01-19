@@ -12,14 +12,14 @@ app.get('/quiz/english', function(req, res){
 app.get('/quiz/general', function(req, res){
 	return res.sendFile( pathName + '/general.html');
 })
-
-app.get('/quiz/htm', function(req, res){
-	return res.sendFile( pathName + '/htm.html');
+app.get('/quiz/html', function(req, res){
+    return res.sendFile( pathName + '/htm.html');
 })
 
 app.get('/quiz/maths', function(req, res){
 	return res.sendFile( pathName + '/maths.html');
 })
+
 
 app.get('/quiz/physics', function(req, res){
 	return res.sendFile( pathName + '/physics.html');
