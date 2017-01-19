@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+	//back Home function
+	function backToHome(){
+		alert()
+	}
+
 	// on click on image
 	$("img").on("click", function(){
 		window.location.href = "/dashboard.html"
@@ -42,7 +47,8 @@ $(document).ready(function(){
 
 	//function to set username
 	function getUsername(name){
-		document.getElementById("namex").innerHTML = "Welcome" + " " + name;
+		document.getElementById("namex").innerHTML = "Welcome" + " " + username;
+
 	}
 
 	//function to set picture

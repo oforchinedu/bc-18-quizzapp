@@ -52,10 +52,10 @@ $(document).ready(function(){
 		});
 	})
 		
-
+	
 	//User name
 	function getUsername(name){
-		document.getElementById("namex").innerHTML = "Welcome" + " " + name;
+		document.getElementById("namex").innerHTML = "Welcome" + " " + username;
 	}
 
 	function setPicture(picture){
