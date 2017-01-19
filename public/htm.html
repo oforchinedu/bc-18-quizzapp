@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Quizzit</title>
+  
+  
+   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+<body>
+	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.6.2/firebase-database.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script>
+	<script type="text/javascript">
+		// Set the configuration for your app
+		// TODO: Replace with your project's config object
+		var config = {
+		    apiKey: "AIzaSyAWUbFWZVXlhhDIlfliUOuRZCvcwfN1UYw",
+		    authDomain: "quizzit-95706.firebaseapp.com",
+		    databaseURL: "https://quizzit-95706.firebaseio.com",
+		    storageBucket: "quizzit-95706.appspot.com"
+		};
+		firebase.initializeApp(config);
+
+		var database = firebase.database();
+	</script>
+	<div class="container-fluid">
+		<button id="btn-signout" onclick="" class="btn-default btn">SignOut</button>
+		<div class="container img-responsive">
+		<div class="row text-center">
+			<div class="col-md-7">
+				<a><h1 onclick="backToHome()" class="text-primary text-right">Quizzit!</h2></a>
+			</div>
+			<div class="col-md-5 text-right">
+				<h6 class="text-primary" id="namex">Welcome</h6>
+				<img class="img-circle" id="myImg" src="" width="107" height="98">
+			</div>
+	  	</div>
+	</div>
+	<br><br>
+
+
+	<h2 id="p" class="hidden">english</h2>
+	<div class="container img-responsive">
+		<div class="row text-center message qBox col-md-12">
+			<!-- Box to hold all elements -->
+			<div class="col-lg-12 ">
+				
+
+
+
+				<!-- Timer Div -->
+      			<h1></h1>
+      			<div id="clockdiv">
+      			<!-- -->
+			        <div class="">
+			          <span class="days"></span>
+			          <div class="smalltext">Days</div>
+			        </div>
+        			<!-- -->
+
+        			<div>
+				        <span class="hours"></span>
+				        <div class="smalltext">Hours</div>
+				    </div>
+				    <div>
+				        <span class="minutes"></span>
+				        <div class="smalltext">Minutes</div>
+				    </div>
+				    <div>
+				        <span class="seconds" id="seconds"></span>
+				        <div class="smalltext">Seconds</div>
+			        </div>
+      			</div>
+
+
+				<!--- Score Display -->
+				<div class="score hidden jumbotron" >
+					<h3 class="mark"></h1>
+					<form>
+					<button class="btn-default btn" id="btn-quiz">Take Quiz</button>
+					</form>
+				</div>
+				<!--- Score Display -->
+
+				<div class="question">
+					<h2 id="qp"></h2>
+					<form id="myForm" class="modal-body">
+						<input id="radio1" type="radio" name="radio" value="a"><label for="radio1" class="radio" id="optionA" ></label>
+						<input id="radio2" type="radio" name="radio" value="b"><label for="radio2" class="radio" id="optionB" ></label>
+						<input id="radio3" type="radio" name="radio" value="c"><label for="radio3" class="radio" id="optionC" ></label>
+						<input id="radio4" type="radio" name="radio" value="d"><label for="radio4" class="radio" id="optionD" ></label>
+					</form>
+					<br><br><br><br><br><br><br><br><br>
+					<button class="btn btn-default btn-md" id="prev" >Previous</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<button class="btn btn-default btn" id="next">Next</button>
+				</div>
+				<!---End of Question div -- >
+
+
+
+
+
+				<!-- Audio -->
+				<audio id="end">
+				    <source src="http://www.freesfx.co.uk/rx2/mp3s/4/16412_1460641277.mp3" >
+				    </source>
+				</audio>
+				<audio id="clap">
+				    <source src="http://www.freesfx.co.uk/rx2/mp3s/4/16491_1460645116.mp3" >
+				    </source>
+				 </audio>
+				 <!--- End of Audio -->
+		</div>
+   </div>
+	</div>
+	<footer>
+	  <p>&copy;Copyright <a href="hhttp://codepen.io/techboss/" target="_blank">Ofor Chinedu P.</a> 2016.</p>
+	</footer>
+	  
+	  
+	</div>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js'></script>
+	<script src="js/question.js"></script>
+
+</body>
+</html>
