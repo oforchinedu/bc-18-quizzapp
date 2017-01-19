@@ -40,7 +40,7 @@ $(document).ready(function(){
 	}
 
 	
-	retriveDashBoard()
+	retrieveDashBoard()
 	
 
 	
@@ -53,9 +53,9 @@ $(document).ready(function(){
 		window.location.href = "/dashboard.html"
 	}
 
-	retriveDashBoard()
-	//function to retrive scores
-	function retriveDashBoard(){
+	retrieveDashBoard()
+	//function to retrieve scores
+	function retrieveDashBoard(){
 		var english, general, html, maths, physics;
 		firebase.database().ref('/users/' + username).once('value').then(function(snapshot){
 			var userDetails = snapshot.val();
