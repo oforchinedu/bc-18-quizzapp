@@ -122,7 +122,7 @@ $(document).ready(function(){
 	//function to retrieve User details
 	firebase.database().ref('/users/' + username).once('value').then(function(snapshot){
 		var userDetails = snapshot.val();
-		getUsername(userDetails.name);
+		getUsername(userDetails.username);
 		setPicture(userDetails.profile_picture)
 	})
 
